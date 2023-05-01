@@ -37,7 +37,7 @@ export function MatchScreen() {
   }
 
   return (
-    <div style={{ height: '100%', backgroundColor: '#804580' }}>
+    <div style={{ height: '100%', backgroundColor: '#f5c807' }}>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentScreen}

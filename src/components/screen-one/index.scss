@@ -1,29 +1,23 @@
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1vh); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(1vh); }
+}
+
 .screen-one-wrapper {
   height: 100%;
   width: 100%;
   background-size: 100% 100%;
-  padding-top: 35vh;
   position: relative;
 
-  .screen-one-botao {
+  .money-bag {
     position: absolute;
-    top: 55vh;
+    top: 4vh;
     width: 40vw;
-    right: 29vw;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    border: 0;
-
-    &:active > img{
-      filter: brightness(1.2);
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
-    }
+    right: 3vw;
+    animation: mover 0.5s infinite alternate;
   }
 }

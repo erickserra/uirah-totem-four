@@ -1,8 +1,9 @@
 import './index.scss'
-import backgroundScreenOne from '../../assets/01_page.png'
+import backgroundScreenOne from '../../assets/01.png'
 import { ScreenComponent } from '../../constants'
 import { useApp } from '../../contexts/AppContext'
-import botaoImage from '../../assets/botao_confira.png'
+import moneyBag from '../../assets/money_bag.png'
+import { ArrowButtons } from '../../components/arrow-buttons'
 
 export function ScreenOne() {
   const { updateScreen } = useApp()
@@ -15,7 +16,7 @@ export function ScreenOne() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        id: 18,
+        id: 19,
       })
     });
     updateScreen(ScreenComponent.SCREEN_TWO)
@@ -23,9 +24,12 @@ export function ScreenOne() {
 
   return (
     <div className="screen-one-wrapper" style={{ backgroundImage: `url(${backgroundScreenOne})` }}>
-      <button onClick={next} className="screen-one-botao">
-        <img src={botaoImage} alt="Saco de dinheiro" />
-      </button>
+      <img className="money-bag" src={moneyBag} alt="Saco de dinheiro" />
+      <ArrowButtons
+        hidePrevious
+        hideBeginning
+        next={next}
+      />
     </div>
   )
 }
