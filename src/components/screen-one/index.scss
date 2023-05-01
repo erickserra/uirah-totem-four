@@ -1,0 +1,29 @@
+.screen-one-wrapper {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  padding-top: 35vh;
+  position: relative;
+
+  .screen-one-botao {
+    position: absolute;
+    top: 55vh;
+    width: 40vw;
+    right: 29vw;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    &:active > img{
+      filter: brightness(1.2);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
